@@ -5,7 +5,7 @@ var badyParser = require('body-parser');
 const fetch = require('node-fetch');
 const TelegramBot = require('node-telegram-bot-api');
 const bot = new TelegramBot(process.env["bot"], {polling:true}); 
-var jsonParser=bodyParser.json({limit:1024*1024*20, type:'application/json'});
+var jsonParser=bodyParser.json({limit:1024*20, type:'application/json'});
 var urlencodedParser=bodyParser.urlencoded({extended:true,limit:1024*20, type:'application/x-www-form-urlencoded' });
 const app = express();
 app.use(jsonParser);
